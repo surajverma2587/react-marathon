@@ -48,6 +48,9 @@ const NavBar = () => {
           <Menu.Item key="5">
             <Link to="/useEffect-5">Hook-Based API</Link>
           </Menu.Item>
+          <Menu.Item key="6">
+            <Link to="/useEffect-6">Custom-Hook API</Link>
+          </Menu.Item>
         </SubMenu>
       </Menu>
     </Sider>
