@@ -31,6 +31,25 @@ const NavBar = () => {
           </Menu.Item>
         </SubMenu>
       </Menu>
+      <Menu mode="inline">
+        <SubMenu key="useState" title="useEffect Hook">
+          <Menu.Item key="1">
+            <Link to="/useEffect-1">Class-Based</Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Link to="/useEffect-2">Hook-Based</Link>
+          </Menu.Item>
+          <Menu.Item key="3">
+            <Link to="/useEffect-3">Timer</Link>
+          </Menu.Item>
+          <Menu.Item key="4">
+            <Link to="/useEffect-4">Class-Based API</Link>
+          </Menu.Item>
+          <Menu.Item key="5">
+            <Link to="/useEffect-5">Hook-Based API</Link>
+          </Menu.Item>
+        </SubMenu>
+      </Menu>
     </Sider>
   );
 };
