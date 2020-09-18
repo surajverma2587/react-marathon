@@ -1,30 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-const useSearch = (initialValue = "") => {
-  const [searchTerm, setSearchTerm] = useState(initialValue);
-
-  const handleChange = ({ target }) => {
-    setSearchTerm(target.value);
-  };
-
-  return { searchTerm, handleChange };
-};
+import useSearch from "./useSearch";
 
 const Search = () => {
   const { searchTerm, handleChange } = useSearch();
 
   return (
     <div className="container w-25">
-      <form>
-        <div class="form-group">
-          <label>Custom-Hook</label>
-          <input type="text" class="form-control" onChange={handleChange} />
-          <small class="form-text text-muted">{searchTerm}</small>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Submit
-        </button>
-      </form>
+      <div className="form-group">
+        <label>Custom-Hook</label>
+        <input type="text" className="form-control" onChange={handleChange} />
+        <small className="form-text text-muted">{searchTerm}</small>
+      </div>
     </div>
   );
 };

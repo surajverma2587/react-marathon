@@ -53,6 +53,13 @@ const NavBar = () => {
           </Menu.Item>
         </SubMenu>
       </Menu>
+      <Menu mode="inline">
+        <SubMenu key="useState" title="forms">
+          <Menu.Item key="1">
+            <Link to="/forms-1">Login Form</Link>
+          </Menu.Item>
+        </SubMenu>
+      </Menu>
     </Sider>
   );
 };

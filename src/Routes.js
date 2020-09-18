@@ -14,6 +14,7 @@ import UseEffect3 from "./useEffect/03";
 import UseEffect4 from "./useEffect/04";
 import UseEffect5 from "./useEffect/05";
 import UseEffect6 from "./useEffect/06";
+import LoginForm from "./forms/01";
 
 const { Content } = Layout;
 
@@ -42,6 +43,8 @@ const Routes = () => {
         <Route exact path="/useEffect-4" component={UseEffect4} />
         <Route exact path="/useEffect-5" component={UseEffect5} />
         <Route exact path="/useEffect-6" component={UseEffect6} />
+
+        <Route exact path="/forms-1" component={LoginForm} />
       </Content>
     </Layout>
   );

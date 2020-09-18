@@ -16,6 +16,10 @@ class UseEffect1 extends Component {
     this.setState({ message: "Hello" });
   }
 
+  componentWillUnmount() {
+    console.log("componentWillUnmount() executed");
+  }
+
   render() {
     console.log("render() executed");
 
