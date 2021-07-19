@@ -4,8 +4,10 @@ const UseEffect2 = () => {
   const [message, setMessage] = useState("---");
 
   useEffect(() => {
-    console.log("something like componentDidMount");
     setMessage("Hello");
+    return () => {
+      console.log("bye bye");
+    };
   }, []);
 
   return (

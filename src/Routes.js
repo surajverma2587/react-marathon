@@ -12,6 +12,9 @@ import UseEffect4 from "./useEffect/04";
 import UseEffect5 from "./useEffect/05";
 import UseEffect6 from "./useEffect/06";
 import LoginForm from "./forms/01";
+import UseReducer1 from "./useReducer/01";
+import UseReducer2 from "./useReducer/02";
+import UseReducer3 from "./useReducer/03";
 
 const { Content } = Layout;
 
@@ -42,6 +45,10 @@ const Routes = () => {
         <Route exact path="/useEffect-6" component={UseEffect6} />
 
         <Route exact path="/forms-1" component={LoginForm} />
+
+        <Route exact path="/useReducer-1" component={UseReducer1} />
+        <Route exact path="/useReducer-2" component={UseReducer2} />
+        <Route exact path="/useReducer-3" component={UseReducer3} />
       </Content>
     </Layout>
   );

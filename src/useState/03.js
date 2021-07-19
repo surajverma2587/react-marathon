@@ -3,13 +3,14 @@ import React from "react";
 import useSearch from "./useSearch";
 
 const Search = () => {
-  const { searchTerm, handleChange } = useSearch();
+  const { searchTerm, Input } = useSearch();
 
   return (
     <div className="container w-25">
       <div className="form-group">
         <label>Custom-Hook</label>
-        <input type="text" className="form-control" onChange={handleChange} />
+        <Input />
+        <Input />
         <small className="form-text text-muted">{searchTerm}</small>
       </div>
     </div>

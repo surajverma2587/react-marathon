@@ -50,6 +50,19 @@ const NavBar = () => {
           </Menu.Item>
         </SubMenu>
       </Menu>
+      <Menu mode="inline">
+        <SubMenu key="useReducer" title="useReducer Hook">
+          <Menu.Item key="1">
+            <Link to="/useReducer-1">useState</Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Link to="/useReducer-2">useReducer</Link>
+          </Menu.Item>
+          <Menu.Item key="3">
+            <Link to="/useReducer-3">API</Link>
+          </Menu.Item>
+        </SubMenu>
+      </Menu>
     </Sider>
   );
 };

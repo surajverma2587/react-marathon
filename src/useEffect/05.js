@@ -30,7 +30,7 @@ const renderError = (error) => {
   );
 };
 
-const renderCard = (user) => {
+const renderCard = (user, message) => {
   const { name, location, picture } = user;
   const imageUrl = picture.large;
   const title = `${name.title}. ${name.first} ${name.last}`;
@@ -43,6 +43,7 @@ const renderCard = (user) => {
       cover={<img alt={title} src={imageUrl} />}
     >
       <Card.Meta title={title} description={description} />
+      <p>{message}</p>
     </Card>
   );
 };
@@ -51,6 +52,8 @@ const UseEffect5 = () => {
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  const [message, setMessage] = useState("---");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -71,6 +74,18 @@ const UseEffect5 = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log("componentDidMount");
+    const timer = setTimeout(() => {
+      setMessage("Hello");
+    }, 2000);
+
+    return () => {
+      console.log("componentWillUnmount");
+      clearTimeout(timer);
+    };
+  }, []);
+
   if (loading) {
     return renderLoadingSpinner();
   }
@@ -79,7 +94,7 @@ const UseEffect5 = () => {
     return renderError(error);
   }
 
-  return renderCard(user);
+  return renderCard(user, message);
 };
 
 export default UseEffect5;

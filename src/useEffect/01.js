@@ -11,6 +11,8 @@ class UseEffect1 extends Component {
     };
   }
 
+  shouldComponentUpdate;
+
   componentDidMount() {
     console.log("componentDidMount() executed");
     this.setState({ message: "Hello" });

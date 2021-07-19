@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const useSearch = (initialValue = "") => {
   const [searchTerm, setSearchTerm] = useState(initialValue);
@@ -7,7 +7,18 @@ const useSearch = (initialValue = "") => {
     setSearchTerm(target.value);
   };
 
-  return { searchTerm, handleChange };
+  const Input = () => {
+    return (
+      <input
+        type="text"
+        className="form-control"
+        onChange={handleChange}
+        value={searchTerm}
+      />
+    );
+  };
+
+  return { searchTerm, Input };
 };
 
 export default useSearch;
